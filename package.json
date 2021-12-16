@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "start": "browser-sync start --port 8080 --server 'src' --files 'src' --single",
+    "start": "NODE_ENV=debug node -r esm --inspect dev/server.js",
     "build": "rollup src/main.js --file dist/bundle.js --format iife"
   },
   "author": {
@@ -13,7 +13,11 @@
   },
   "license": "BSD",
   "devDependencies": {
-    "browser-sync": "^2.24.1"
+    "bootstrap-vue-dynamic-form": "github:vencax/bootstrap-vue-dynamic-form",
+    "browser-sync": "^2.24.1",
+    "esm": "^3.2.25",
+    "http-proxy-middleware": "^2.0.1",
+    "modularni-urad-admin-components": "github:modularni-urad/admin-components"
   },
   "dependencies": {
     "rollup": "^1.29.1"
